@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | Sports Scheduler</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<!-- Mobile Top Bar -->
+<div class="mobile-header">
+  <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+  <span>🏟 Sports Scheduler</span>
+</div>
+
+<div class="dashboard-layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <h2>🏟 Sports</h2>
+
+    <button class="nav-btn active" onclick="showPage('home', this)">🏠 Home</button>
+    <button class="nav-btn" onclick="showPage('sports', this)">🏏 Create Sport</button>
+    <button class="nav-btn" onclick="showPage('session', this)">📅 Create Session</button>
+    <button class="nav-btn" onclick="showPage('available', this)">👥 Available</button>
+    <button class="nav-btn" onclick="showPage('my', this)">⭐ My Sessions</button>
+    <button class="nav-btn" onclick="showPage('reports', this)">📊 Reports</button>
+
+    <button class="logout">🚪 Logout</button>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+<h1 class="app-title dark">Sports Scheduler</h1>
+
+    <section id="home" class="page active">
+      <h1>Welcome to Sports Scheduler</h1>
+      <p>Select a module from the sidebar.</p>
+    </section>
+
+    <section id="sports" class="page">
+      <h1>Create Sport</h1>
+      <input placeholder="Enter sport name">
+      <button>Add Sport</button>
+    </section>
+
+    <section id="session" class="page">
+      <h1>Create Session</h1>
+      <input placeholder="Sport Name">
+      <input placeholder="Team A players">
+      <input placeholder="Team B players">
+      <input type="datetime-local">
+      <input placeholder="Venue">
+      <button>Create Session</button>
+    </section>
+
+    <section id="available" class="page">
+      <h1>Available Sessions</h1>
+      <div class="session-card">🏏 Cricket – City Ground <button>Join</button></div>
+      <div class="session-card">⚽ Football – Indoor Stadium <button>Join</button></div>
+    </section>
+
+    <section id="my" class="page">
+      <h1>My Sessions</h1>
+      <div class="session-card">Cricket – City Ground <button>Cancel</button></div>
+    </section>
+
+    <section id="reports" class="page">
+  <h1>Sports Reports</h1>
+  <p class="subtitle">Overview of sports sessions and participation</p>
+
+  <div class="report-grid">
+
+    <div class="report-card">
+      <h3>🏏 Cricket</h3>
+      <p><strong>Sessions Conducted:</strong> 5</p>
+      <p><strong>Total Participants:</strong> 48</p>
+      <span class="status active">Active</span>
+    </div>
+
+    <div class="report-card">
+      <h3>⚽ Football</h3>
+      <p><strong>Sessions Conducted:</strong> 3</p>
+      <p><strong>Total Participants:</strong> 36</p>
+      <span class="status active">Active</span>
+    </div>
+
+    <div class="report-card">
+      <h3>🏸 Badminton</h3>
+      <p><strong>Sessions Conducted:</strong> 2</p>
+      <p><strong>Total Participants:</strong> 16</p>
+      <span class="status completed">Completed</span>
+    </div>
+
+  </div>
+</section>
+
+
+  </main>
+</div>
+
+<script src="./app.js"></script>
+</body>
+</html>
